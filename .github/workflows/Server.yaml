@@ -1,12 +1,11 @@
-name: OTS Action
+name: Server Action
 
 on: workflow_dispatch
 
 jobs:
-
-    OTS-Action:
+    Server-Action:
         runs-on: self-hosted
-        name: Execute OTS Test
+        name: Execute Server Test
         steps:
          - name: Execute Test
            uses: anuraag-k/ServerAction@main
