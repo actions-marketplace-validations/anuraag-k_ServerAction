@@ -18,5 +18,7 @@ jobs:
             branch: master
             assetId: 8077ddd1-cc66-4a22-b7dd-d1cc664a22f9
             environment: SecondEnv
+            datasets: s1:d1;s2:d2
+            exportReport: C:/TestFolder/TestFile.xml
             variables: varname1=value1;varname2=value2
             tags: l1,l2
