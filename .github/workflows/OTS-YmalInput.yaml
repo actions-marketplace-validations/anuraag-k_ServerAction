@@ -9,7 +9,7 @@ jobs:
         name: Execute OTS Test
         steps:
          - name: Execute Test
-           uses: SonaHJ/OTSAction@main
+           uses: anuraag-k/ServerAction@main
            with:
             serverUrl: https://master-hcl.tp-k8s.nonprod.hclpnp.com/
             offlineToken: eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTk1OTJhMy1hNmQwLTRiMzMtYmVlMi0yODJhOThlNWZhYjAifQ.eyJpYXQiOjE2NTgzOTk3NzYsImp0aSI6ImRjMDhmMDdiLTNkNzEtNGJlZC1hZWM1LTBjZTY2M2M5MjdmZCIsImlzcyI6Imh0dHBzOi8vbWFzdGVyLWhjbC50cC1rOHMubm9ucHJvZC5oY2xwbnAuY29tL2F1dGgvcmVhbG1zL3Rlc3RzZXJ2ZXIiLCJhdWQiOiJodHRwczovL21hc3Rlci1oY2wudHAtazhzLm5vbnByb2QuaGNscG5wLmNvbS9hdXRoL3JlYWxtcy90ZXN0c2VydmVyIiwic3ViIjoiMDZiOWUwNTYtYmM5My00ZjBlLWJmNmEtMmY1MzQ3YjA0YzhiIiwidHlwIjoiT2ZmbGluZSIsImF6cCI6InRlc3RzZXJ2ZXIiLCJzZXNzaW9uX3N0YXRlIjoiNGNjYjgzOWUtMmYxZi00MzgzLWE5MmUtOWU0OGEwZmM1NTMwIiwic2NvcGUiOiJ0ZXN0c2VydmVyIGVtYWlsIG9mZmxpbmVfYWNjZXNzIHByb2ZpbGUiLCJzaWQiOiI0Y2NiODM5ZS0yZjFmLTQzODMtYTkyZS05ZTQ4YTBmYzU1MzAifQ.2f8zxSYc-Q-udkdzQxmHNKdAgm119Juc3X1JJeA5tGY
