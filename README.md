@@ -14,59 +14,26 @@ This enables you to run test assets that are available in a project of a HCL One
     ```yaml
     name: HCL OneTest Server
 
-    on:
-        workflow_dispatch:
-            inputs:
-                serverUrl:
-                    description: 'Server URL'
-                    required: true
-                offlineToken:
-                    description: 'Offline Token'
-                    required: true
-                teamspace:
-                    description: 'Team Space Name'
-                    required: true
-                project:
-                    description: 'Project'
-                    required: true
-                branch:
-                    description: 'Branch'
-                    required: true
-                assetId:
-                    description: 'AssetID'
-                    required: true
-                environment:
-                    description: 'API Test Environment'
-                    required: false
-                datasets:
-                    description: 'Datasets'
-                    required: false
-                exportReport:
-                    description: 'Export Junit Report'
-                    required: false
-                multipleValues:
-                    description: 'Multiple Values'
-                    required: false
+    on: workflow_dispatch
 
     jobs:
-
         OTS-Action:
             runs-on: self-hosted
             name: HCL OneTest Server
             steps:
              - name: Execute Test
-               uses: SonaHJ/OTSAction@HCLOneTestServer_03
+               uses: anuraag-k/ServerAction@main
                with:
-                serverUrl: '${{ github.event.inputs.serverUrl }}'
-                offlineToken: '${{ github.event.inputs.offlineToken }}'
-                teamspace: '${{ github.event.inputs.teamspace }}'
-                project: '${{ github.event.inputs.project }}'
-                branch: '${{ github.event.inputs.branch }}'
-                assetId: '${{ github.event.inputs.assetId }}'
-                environment: '${{ github.event.inputs.environment }}'
-                datasets: '${{ github.event.inputs.datasets }}'
-                exportReport: '${{ github.event.inputs.exportReport }}'
-                multipleValues: '${{ github.event.inputs.multipleValues }}'
+                serverUrl:
+                offlineToken:
+                teamspace:
+                project:
+                branch:
+                assetId:
+                environment:
+                datasets:
+                variables:
+                labels:
 
     ```
 5. Push it into the main branch
@@ -112,28 +79,9 @@ URL of the HCL OneTest Server where the tests are located. URL should be of the 
 
 **Optional**. Semicolon (;) delimited list of source:replacement datasets for the job to run. For example, dataset1:dataset2;dataset3:dataset4
 
-### `exportReport`
-
-**Optional**. Use this option to export the Junit report generated for the test in XML format. Specify the complete path to the directory including the filename. For example, C:/TestFolder/TestFile.xml
-
-### `multipleValues`
-
-You may only define up to 10 inputs for a workflow_dispatch event. Remaining inputs need to be Key=Value pair.
-
-https://github.community/t/you-may-only-define-up-to-10-inputs-for-a-workflow-dispatch-event/160733
-
-https://github.com/github/docs/issues/15710
-
-Specify the below inputs in the Key=Value format.
-    Ex: variables=sampleVariable|tags=sampleTag
-    
-**Note that separator between the key-value pairs is '|' character.**
-
-## Supported multipleValues inputs
-
 ### `variables`
 
-Optional. Variables corresponding to the test. The format is variables=sampleVariable
+Optional. Variables corresponding to the test. The format is name_of_the_variable=value_of_the_variable. You can add multiple variables to the test run separated by a semicolon.
 
-### `tags`
-Optional. Variables corresponding to the test. The format is tags=sampleTag
+### `labels`
+Optional. Labels to add to test results when the test run is complete. You can add multiple labels to a test result separated by a comma. For example, label1, label2.
