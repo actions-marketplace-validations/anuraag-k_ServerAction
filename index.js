@@ -236,7 +236,7 @@ const main = async () => {
 		
 		const variables = core.getInput('variables', { required: false });
         asset.setVariables = variables;
-		const tags = core.getInput('tags', { required: false });
+		const tags = core.getInput('labels', { required: false });
         asset.setTags = tags;
 		const secretsCollection = core.getInput('secretsCollection', { required: false });
         asset.setSecretsCollection = secretsCollection;
