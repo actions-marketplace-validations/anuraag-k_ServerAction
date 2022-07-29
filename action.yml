@@ -1,4 +1,4 @@
-name: 'HCL OneTest Server GitHub Action'
+name: 'Server GitHub Action'
 description: 'Execute OTS Test from GitHub Action'
 inputs:
   serverUrl:
