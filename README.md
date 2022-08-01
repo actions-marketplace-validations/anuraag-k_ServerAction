@@ -9,33 +9,34 @@ This enables you to run test assets that are available in a project of a HCL One
 3. Create a .yml file with any name inside the ".github/workflows" folder 
 4. Then you need to code thta yml file as mentioned in the following example.
 
-    ## Example usage
+## Example usage
 
-    ```yaml
-    name: HCL OneTest Server
+```yaml
+name: HCL OneTest Server
 
-    on: workflow_dispatch
+on: workflow_dispatch
 
-    jobs:
-        OTS-Action:
-            runs-on: self-hosted
-            name: HCL OneTest Server
-            steps:
-             - name: Execute Test
-               uses: anuraag-k/ServerAction@main
-               with:
-                serverUrl:
-                offlineToken:
-                teamspace:
-                project:
-                branch:
-                assetId:
-                environment:
-                datasets:
-                variables:
-                labels:
+jobs:
+    OTS-Action:
+        runs-on: self-hosted
+        name: HCL OneTest Server
+        steps:
+         - name: Execute Test
+           uses: anuraag-k/ServerAction@main
+           with:
+            serverUrl: 
+            offlineToken: 
+            teamspace: 
+            project: 
+            branch: master
+            assetId: 
+            environment: 
+            datasets:
+            labels: 
+            secretsCollection:
+            variables:
 
-    ```
+```
 5. Push it into the main branch
 6. To configure agent:
     1. Go to settings (Repo).
@@ -79,9 +80,9 @@ URL of the HCL OneTest Server where the tests are located. URL should be of the 
 
 **Optional**. Semicolon (;) delimited list of source:replacement datasets for the job to run. For example, dataset1:dataset2;dataset3:dataset4
 
+### `labels`
+Optional. Labels to add to test results when the test run is complete. You can add multiple labels to a test result separated by a comma. For example, label1, label2.
+
 ### `variables`
 
 Optional. Variables corresponding to the test. The format is name_of_the_variable=value_of_the_variable. You can add multiple variables to the test run separated by a semicolon.
-
-### `labels`
-Optional. Labels to add to test results when the test run is complete. You can add multiple labels to a test result separated by a comma. For example, label1, label2.
