@@ -83,6 +83,10 @@ URL of the HCL OneTest Server where the tests are located. URL should be of the 
 ### `labels`
 Optional. Labels to add to test results when the test run is complete. You can add multiple labels to a test result separated by a comma. For example, label1, label2.
 
+### `secretsCollection`
+
+Optional. Secrets collection name for the job to run.
+
 ### `variables`
 
 Optional. Variables corresponding to the test. The format is name_of_the_variable=value_of_the_variable. You can add multiple variables to the test run separated by a semicolon.
