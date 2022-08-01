@@ -6,6 +6,7 @@ const axios = require("axios");
 
 var datasetSrcId;
 var datasetReplaceId;
+var secretsCollectionId;
 const Status = {
     COMPLETE: 'COMPLETE',
     COMPLETE_WITH_ERROR: 'COMPLETE_WITH_ERROR',
@@ -661,7 +662,7 @@ async function startJobExecution(serverStore, asset) {
 
     if (asset.getSecretsCollection) {
         await getSecretCollectionId(serverStore, asset);
-        AssetParameters["secretsCollection"] = asset.getSecretId;
+        AssetParameters["secretsCollection"] = secretsCollectionId;
     }
 
     await accessTokenGen(serverStore);
