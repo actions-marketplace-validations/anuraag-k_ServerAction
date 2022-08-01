@@ -17,4 +17,8 @@ jobs:
             branch: master
             assetId: 8077ddd1-cc66-4a22-b7dd-d1cc664a22f9
             environment: SecondEnv
+            datasets:
             labels: label1, label2
+            secretsCollection:
+            variables:
+            
