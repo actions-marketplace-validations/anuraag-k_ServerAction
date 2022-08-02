@@ -8652,7 +8652,8 @@ const main = async () => {
          * We need to fetch all the inputs that were provided to our action
          * and store them in variables for us to use.
          **/
-        const serverUrl = core.getInput('serverUrl', { required: true });
+        var serverUrl = core.getInput('serverUrl', { required: true });
+        serverUrl += serverUrl.endsWith("/") ? "" : "/";
         serverStore.setServerUrl = serverUrl;
         const offlineToken = core.getInput('offlineToken', { required: true });
         serverStore.setOfflineToken = offlineToken;
