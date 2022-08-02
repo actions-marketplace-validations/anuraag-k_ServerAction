@@ -15,9 +15,9 @@ jobs:
             teamspace: Initial Team Space
             project: A_P2
             branch: master
-            assetId: fc55634d-7224-47eb-9563-4d722437ebc0
-            environment: SVT
+            assetId: e01a6c61-ac2a-4e7b-9a6c-61ac2aae7b5d
+            environment: 
             datasets:
-            labels: label1
-            secretsCollection: SVT
+            labels: 
+            secretsCollection: 
             variables:
