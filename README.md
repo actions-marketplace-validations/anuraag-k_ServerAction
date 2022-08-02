@@ -2,7 +2,7 @@
 
 This enables you to run test assets that are available in a project of a HCL OneTest™ Server from a Github action.
 
-## Pre requisites to run this action
+## Prerequisites to run this action
 
 1. Create a github repository
 2. Create a folder named ".github/workflows" in the root of the repository
