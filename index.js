@@ -256,7 +256,8 @@ const main = async () => {
         if (
             asset.getExternalType == "APISUITE" ||
             asset.getExternalType == "APITEST" ||
-            asset.getExternalType == "APISTUB"
+            asset.getExternalType == "APISTUB" ||
+            asset.getExternalType == "POSTMAN"
         ) {
             await validateEnvironment(serverStore, asset);
         }
@@ -609,7 +610,8 @@ async function startJobExecution(serverStore, asset) {
     if (
         asset.getExternalType == "APISUITE" ||
         asset.getExternalType == "APITEST" ||
-        asset.getExternalType == "APISTUB"
+        asset.getExternalType == "APISTUB" ||
+        asset.getExternalType == "POSTMAN"
     ) {
         AssetParameters["environment"] = asset.getEnvironment;
     }
