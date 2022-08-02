@@ -28,7 +28,7 @@ jobs:
             offlineToken: 
             teamspace: 
             project: 
-            branch: master
+            branch: 
             assetId: 
             environment: 
             datasets:
