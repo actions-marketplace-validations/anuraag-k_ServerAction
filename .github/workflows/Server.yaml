@@ -10,13 +10,13 @@ jobs:
          - name: Execute Test
            uses: anuraag-k/ServerAction@main
            with:
-            serverUrl: 
-            offlineToken: 
-            teamspace: 
-            project: 
-            branch: 
-            assetId: 
-            environment: 
+            serverUrl: https://master-hcl.tp-k8s.nonprod.hclpnp.com
+            offlineToken: eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTk1OTJhMy1hNmQwLTRiMzMtYmVlMi0yODJhOThlNWZhYjAifQ.eyJpYXQiOjE2NTg5MjY5MTEsImp0aSI6IjE1NzI3YjgxLWMxMjgtNDQ1NS1hMWI1LWRkZmM0MjdhN2FiNiIsImlzcyI6Imh0dHBzOi8vbWFzdGVyLWhjbC50cC1rOHMubm9ucHJvZC5oY2xwbnAuY29tL2F1dGgvcmVhbG1zL3Rlc3RzZXJ2ZXIiLCJhdWQiOiJodHRwczovL21hc3Rlci1oY2wudHAtazhzLm5vbnByb2QuaGNscG5wLmNvbS9hdXRoL3JlYWxtcy90ZXN0c2VydmVyIiwic3ViIjoiNGY0MGRlZmEtZTM0My00OWJiLWE0NjQtYTU0ZGI2NzQ2MjE1IiwidHlwIjoiT2ZmbGluZSIsImF6cCI6InRlc3RzZXJ2ZXIiLCJzZXNzaW9uX3N0YXRlIjoiYzc4ODRiMDEtYmIyNi00OTBhLTk0NjctODY3MzRjZTFmZTNjIiwic2NvcGUiOiJ0ZXN0c2VydmVyIGVtYWlsIG9mZmxpbmVfYWNjZXNzIHByb2ZpbGUiLCJzaWQiOiJjNzg4NGIwMS1iYjI2LTQ5MGEtOTQ2Ny04NjczNGNlMWZlM2MifQ.Nym6KTVqwU4A1jtCD2hfL6B2nFHzpBSab2U5G3Z-PvM
+            teamspace: Initial Team Space
+            project: A_P2
+            branch: master
+            assetId: 8077ddd1-cc66-4a22-b7dd-d1cc664a22f9
+            environment: SecondEnv
             datasets:
             labels: 
             secretsCollection: 
